@@ -1,7 +1,7 @@
 /*
 	Author: Kniffen Technologies
 	Author URI: http://knifftech.net/
-	Version: 1.1
+	Version: 1.2
 	License: MIT 
 */
 @-webkit-keyframes fade {
@@ -424,17 +424,17 @@ html,
   overflow: hidden;
   padding: 16px;
   margin: 20px;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .card:hover {
   text-decoration: none !important;
-}
-
-.card:hover .img-wrapper img {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-       -o-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+       -o-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .img-wrapper {
@@ -654,6 +654,16 @@ html,
   .theme-feature:nth-child(even) {
     margin-bottom: 60px;
   }
+}
+
+.design {
+  text-align: center;
+}
+
+.design .screenshot {
+  max-width: 80%;
+  height: auto;
+  margin: 40px auto;
 }
 
 .app {

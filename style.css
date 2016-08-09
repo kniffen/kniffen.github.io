@@ -1,7 +1,7 @@
 /*
 	Author: Kniffen Technologies
 	Author URI: http://knifftech.net/
-	Version: 1.2
+	Version: 1.3
 	License: MIT 
 */
 @-webkit-keyframes fade {
@@ -160,11 +160,17 @@ li {
   min-width: 160px;
   padding: 10px 0 20px 0;
   z-index: 10;
+  font-size: 20pt;
+  font-weight: 300;
 }
 
 .header-menu {
   padding-top: 40px;
   margin: 0 20px;
+}
+
+.header-menu li {
+  line-height: 40pt;
 }
 
 .no-js .header-menu-container {
@@ -251,7 +257,6 @@ html,
   -webkit-animation-duration: 4s;
        -o-animation-duration: 4s;
           animation-duration: 4s;
-  overflow-y: auto;
 }
 
 .home-block-inner {
@@ -266,6 +271,17 @@ html,
   font-size: 36pt;
   font-weight: 300;
   margin-bottom: 5%;
+}
+
+.home-portfolio .home-block-inner {
+  position: relative;
+  padding: 0 0 80px;
+}
+
+.view-more {
+  display: block;
+  margin: 80px auto;
+  color: #1e73be !important;
 }
 
 .home-about {
@@ -438,7 +454,7 @@ html,
 }
 
 .img-wrapper {
-  background-color: white;
+  background-color: #21c79c;
   position: relative;
   height: 400px;
   overflow: hidden;
@@ -449,9 +465,25 @@ html,
 }
 
 .img-wrapper img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   -webkit-transition: .3s ease-in-out;
   -o-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+}
+
+@media (max-width: 640px) {
+  .img-wrapper {
+    height: auto;
+  }
+  .img-wrapper img {
+    position: relative;
+  }
 }
 
 .info h4 {
@@ -462,20 +494,13 @@ html,
   padding: 8px 0 0;
 }
 
+.info p i {
+  margin-right: 8px;
+}
+
 .apps {
   background-color: #191919;
   color: #f3f3f3;
-}
-
-.themes .img-wrapper,
-.apps .img-wrapper {
-  height: auto;
-}
-
-.themes .img-wrapper img,
-.apps .img-wrapper img {
-  width: 100%;
-  height: auto;
 }
 
 .portfolio-wrapper {
@@ -492,6 +517,13 @@ html,
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 1366px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 1366px) {
+  max-width: 100%;
 }
 
 @media (max-width: 640px) {
@@ -654,16 +686,6 @@ html,
   .theme-feature:nth-child(even) {
     margin-bottom: 60px;
   }
-}
-
-.design {
-  text-align: center;
-}
-
-.design .screenshot {
-  max-width: 80%;
-  height: auto;
-  margin: 40px auto;
 }
 
 .app {

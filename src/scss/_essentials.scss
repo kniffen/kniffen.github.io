@@ -1,0 +1,62 @@
+$openSans: "Open Sans", sans-serif;
+$roboto: "Roboto", sans-serif;
+$desktop: 1366px;
+$tablet: 640px;
+$phone: 320px;
+$black: #191919;
+$white: #f3f3f3;
+
+:root{
+	font-size: 10pt;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: $white;
+	font-family: $openSans;
+}
+
+p{
+	padding-bottom: 20px;
+
+	a{ text-decoration: underline; }
+}
+
+a{
+	color: $black;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover{ text-decoration: underline; }
+}
+
+img{ vertical-align: bottom; }
+
+li{ list-style: none; }
+
+.page-title{
+	margin: 40px 0 20px;
+	text-align: center;
+
+	h1{ 
+		display: inline-block;
+		font-size: 60pt;
+		font-weight: 300;
+	}
+}
+
+.page-title,
+.page-tagline{
+	display: block;
+	text-align: center;
+}
+
+@media (max-width: $tablet){
+	.page-title h1{
+		font-size: 30pt;
+	}
+}

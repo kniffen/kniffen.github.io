@@ -1,0 +1,183 @@
+.theme-buttons{
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+
+	a{
+		display: block;
+		background-color: blue;
+		color: $white;
+		font-weight: bold;
+		margin: 0 10px;
+		width: 100px;
+		padding: 6px;
+		border-radius: 4px;
+		text-align: center;
+	}
+}
+
+.theme-coming-soon{
+	text-align: center;
+	font-weight: bold;
+	margin: 20px 0;
+}
+
+.theme-info{
+	width: 100%;
+	max-width: 960px;
+	margin: 40px auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.theme-screenshot{
+	width: 100%;
+}
+
+.meta{
+	position: absolute;
+	background-color: white;
+	padding: 10px;
+	font-size: 12px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	height: 180px;
+	right: 0px;
+	opacity: .95;
+	animation: slide 1s ease-in-out;
+
+	li{ line-height: 30px; }
+}
+
+@keyframes slide{
+	from{ right: -300px; }
+	to{ right: 0px; }
+}
+
+.theme-herschel{
+	.theme-buttons a{
+		background-color: #e00000;
+	}
+
+	.meta{
+		background-color: #191919;
+		color: white;
+	}
+}
+
+.theme-reginald{
+	.theme-buttons a{
+		background-color: #1e73be;
+	}
+}
+
+.theme-siggen{
+	.theme-buttons a{
+		background-color: #191919;
+	}
+
+	.meta{
+		background-color: #191919;
+		color: white;
+	}
+}
+
+.theme-ruffie{
+	.page-title h1{
+		background-color: white;
+		border: 5px solid $black;
+		text-transform: uppercase;
+		border-radius: 4rem;
+		padding: 0 2rem;
+		font-weight: 800;
+	}
+
+	.theme-buttons a{
+		background-color: white;
+		border: 3px solid $black;
+		border-radius: 20px;
+		color: $black;
+		text-transform: uppercase;
+		transition: .3s ease-in-out;
+
+		&:hover{
+			filter: invert(100%);
+			text-decoration: none;
+		}
+	}
+}
+
+.theme-bidnis{
+	.page-title h1{
+		text-transform: uppercase;
+		font-weight: 800;
+	}
+
+	.theme-buttons a{
+		background-color: #ffd200;
+		color: #191919;
+		border-radius: 0;
+	}
+}
+
+.theme-features{
+	max-width: 960px;
+	margin: 20px auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.theme-feature{
+	width: calc(50% - 100px);
+	padding: 50px;
+
+	img{
+		width: 100%;
+		height: auto;
+	}
+
+	li{ 
+		list-style: disc; 
+		margin-left: 20px;
+	}
+
+	&:nth-child(2){
+		order: -1;
+	}
+}
+
+@media (max-width: 960px){
+	.theme-info{
+		width: 90%;
+		width: calc(100%-40px);
+	}
+}
+
+@media (max-width: $tablet){
+	.theme-info{
+		background-color: white;
+	}
+
+	.meta{
+		position: relative;
+		animation: none;
+	}
+
+
+	.theme-features{
+		display: block;
+		margin: 20px;
+		padding: 0;
+	}
+
+	.theme-feature{
+		width: 90%;
+		padding: 0;
+		margin: 20px;
+
+		&:nth-child(even){
+			margin-bottom: 60px;
+		}
+	}
+}

@@ -1,0 +1,42 @@
+.site-header{
+	position: relative;
+	background-color: $black;
+	padding: 10px 0;
+	color: $white;
+	line-height: 40px;
+	min-height: 40px;
+
+	i{ font-size: 20pt; }
+
+	a{ color: $white; }
+
+	.logo{
+		text-transform: uppercase;
+		margin-left: 10px;
+		font-size: 30px;
+	}
+
+	.social-media{
+		position: absolute;
+		top: 10px;
+		right: 0;
+		display: flex;
+		margin: 0 20px;
+
+		li:not(:last-child){ margin-right: 20px; }
+
+		i{ line-height: 40px; }
+	}
+}
+
+@media (max-width: $tablet){
+	.site-header{
+		.logo{ text-align: center; }
+		
+		.social-media{
+			position: relative;
+			top: auto;
+			justify-content: center;
+		}
+	}
+}

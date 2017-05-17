@@ -1,0 +1,67 @@
+extends head.jade
+
+block vars
+	- var bodyClass = ['theme']
+	- var slug = 'theme'
+	- var font = 'Open Sans'
+	- var name = 'undefined'
+	- var tagline = 'Just another WordPress theme'
+	-	var demoURL = '#'
+	-	var downloadURL = '#'
+	- var options = ['Color scheme', 'Social Media icons']
+
+block content
+	include header-bar.jade
+
+	.page-title
+		h1 #{name}
+
+	.page-tagline #{tagline}
+
+	if downloadURL != '#'
+		.theme-buttons
+			a(href="#{demoURL}" target="_blank") Demo
+			a(href="#{downloadURL}") Download
+	else
+		.theme-coming-soon Coming Soon
+
+	.theme-info
+		img(class="theme-screenshot" src="/assets/#{slug}/big-screenshot.jpg" alt="#{slug} screenshot")
+
+		ul.meta
+			each x, y in meta
+				li
+					b #{y}: 
+					span #{x}
+
+	.theme-features
+		.theme-feature
+			h3 Responsive
+			
+			p.
+				All KniffTech themes are made with mobile and desktop devices in mind
+				and will adjust seamlessly to any screen.
+		
+		.theme-feature
+			img(src="/assets/#{slug}/devices.png" alt="#{slug} devices")
+
+		.theme-feature
+			h3 Customizable
+			
+			p.
+				#{name} features a variety of customizable options<br />
+				such as but not limited to
+			
+			ul.options
+				each option in options
+					li= option
+
+		.theme-feature
+			img(src="/assets/#{slug}/options.jpg" alt="#{slug} options")
+
+	if downloadURL != '#'
+		.theme-buttons
+			a(href="#{demoURL}" target="_blank") Demo
+			a(href="#{downloadURL}") Download
+	else
+		.theme-coming-soon Coming Soon

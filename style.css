@@ -121,7 +121,7 @@ ul {
 
 footer {
   position: relative;
-  border-bottom: .5rem solid var(--color-scheme);
+  border-bottom: .2rem solid var(--color-scheme);
 }
 
 .copyright {

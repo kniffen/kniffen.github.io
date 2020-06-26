@@ -1,0 +1,160 @@
+:root {
+  --color-bg: #0e0f12;
+  --color-txt: #a8a8a8;
+  --color-scheme: #fcee09;
+  --spacing: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-txt);
+  font-family: 'Abel', sans-serif;
+  font-size: 16px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 1fr minmax(2em, auto);
+  align-content: start;
+  grid-gap: var(--spacing);
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+main {
+  width: calc(100% - var(--spacing) * 8);
+  display: grid;
+  grid-gap: calc(var(--spacing) * 4);
+  align-content: start;
+  margin: calc(var(--spacing) * 4) auto;
+}
+
+a {
+  color: var(--color-txt);
+  text-decoration: none;
+  transition: ease-in-out .3s;
+}
+
+a:hover,
+a:focus {
+  padding-left: 5px;  
+  color: var(--color-scheme);
+}
+
+li {
+  list-style: none;
+}
+
+.boxes {
+  display: grid;
+  grid-gap: calc(var(--spacing) * 4);
+}
+
+.box {
+  position: relative;
+  border: 1px solid var(--color-txt);
+  padding: 20px;
+  display: grid;
+  grid-gap: var(--spacing);
+  align-content: start;
+  transition: ease-in-out .3s;
+}
+
+.box::before,
+.box::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  transition: ease-in-out .3s;
+}
+
+.box::before {
+  top: 0;
+  right: 0;
+  border-top: 5px solid var(--color-txt);
+  border-right: 5px solid var(--color-txt);  
+}
+
+.box::after {
+  bottom: 0;
+  left: 0;
+  border-bottom: 5px solid var(--color-txt);
+  border-left: 5px solid var(--color-txt);  
+}
+
+.box:hover::before,
+.box:focus::before,
+.box:hover::after,
+.box:focus::after {
+  width: 30px;
+  height: 30px;
+}
+
+.box p {
+  font-size: .8rem;
+}
+
+ul {
+  display: grid;
+}
+
+.main-projects ul {
+  grid-gap: var(--spacing);
+}
+
+footer {
+  position: relative;
+  border-bottom: .5rem solid var(--color-scheme);
+}
+
+.copyright {
+  font-size: .7em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: .5em;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    align-items: center;
+  }
+
+  main {
+    max-width: 768px;
+  }
+
+  .copyright {
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    grid-gap: calc(var(--spacing) * 8);
+  }
+
+  .boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .box:first-child {
+    grid-column: 1 / 3;
+  }
+}

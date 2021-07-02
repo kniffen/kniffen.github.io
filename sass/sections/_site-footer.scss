@@ -1,0 +1,10 @@
+.site-footer {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: small;
+}
+@media (min-width: 48em) {
+  .site-footer {
+    grid-column: 2 / 12;
+  }
+}

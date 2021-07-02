@@ -1,0 +1,31 @@
+.button {
+  position: relative;
+  display: inline-block;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: var(--font-family-heading);
+  padding: 0.5em 1em;
+  transition: color .5s ease-in-out;
+
+  &::before {
+    content: '';
+    background-color: var(--border-color);
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width .25s ease-in-out;
+  }
+
+  &:hover {
+    color: var(--background-color);
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}

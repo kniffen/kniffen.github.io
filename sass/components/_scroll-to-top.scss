@@ -1,0 +1,30 @@
+.scroll-to-top {
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: -50em;
+    right: 2em;
+    writing-mode: vertical-rl;
+    font-weight: 400;
+    transition: bottom 1s ease-in-out;
+    
+    i {
+      margin-bottom: 0.25em;
+    }
+
+    &:hover i {
+      animation-name: bource;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .js .scroll-to-top {
+    display: block;
+  }
+}

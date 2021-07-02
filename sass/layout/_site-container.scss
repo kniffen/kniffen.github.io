@@ -1,0 +1,19 @@
+.site-container {
+  padding: 1em;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 48em) {
+  .site-container {
+    display: grid;
+    padding: 2em;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1em;
+
+    
+    > a {
+      grid-column: 2;
+    }
+  }
+}

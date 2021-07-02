@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kniffen</title>
+  <title>Kniffen - I like making things</title>
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Kniffen | Software development and graphic design">
+  <meta name="description" content="Kniffen | I like making things">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -17,74 +17,142 @@
   <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
   <meta name="theme-color" content="#fcee09">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" type="text/css" href="/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="no-js">
+  <div class="loading">
+    <img class="site-logo" alt="Kniffen logo" src="/assets/images/logo.svg" />
+    <span class="loading__bar"></span>
+  </div>
+  
+  <div class="site-container">
 
-  <div class="wrapper">
-    <main>
-
-      <img src="/assets/images/logo.svg" alt="kniffen logo" />
-
-      <div class="boxes">
-        <div class="box main-projects">
-          <h3>Main projects</h3>
-
-          <ul>
-            <li>
-              <a href="https://trucksimtelemetry.knifftech.org/" target="_blank" rel="noopener noreferrer" aria-label="TruckSim-Telemetry">TruckSim-Telemetry</a>
-              <p>NodeJS library for getting telemetry data from the scs-sdk-plugin.</p>
-            </li>
-            
-            <li>
-              <a href="https://fullstream.knifftech.org/" target="_blank" rel="noopener noreferrer" aria-label="FullStream">FullStream</a>
-              <p>Alternative interface for Twitch.TV</p>
-            </li>
-            
-
-            <li>
-              <a href="https://github.com/kniffen/KniffBot/" target="_blank" rel="noopener noreferrer" aria-label="KniffBot">KniffBot</a>
-              <p>A small yet versitile bot for Discord and IRC.</p>
-            </li>
-
-            <li>
-              <a href="https://bpmdetector.knifftech.org/" target="_blank" rel="noopener noreferrer" aria-label="BPM detector">BPM detector</a>
-              <p>A service to detect BPM from audio samples.</p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="box side-projects">
-          <h3>Side projects</h3>
-
-          <ul>
-            <li><a href="https://gratisthemes.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Gratis Themes">Gratis Themes</a></li>
-            <li><a href="https://www.instagram.com/trollskalle/" target="_blank" rel="noopener noreferrer" aria-label="Trollskalle">Trollskalle</a></li>
-            <li><a href="https://www.instagram.com/symbolisticdesign/" target="_blank" rel="noopener noreferrer" aria-label="Symbolistic">Symbolistic</a></li>
-            <li><a href="https://github.com/Snurr-Games" target="_blank" rel="noopener noreferrer" aria-label="Snurr games">Snurr games</a></li>
-          </ul>
-        </div>
-
-         <div class="box social-media">
-          <h3>Social media</h3>
-
-          <ul>
-            <li><a href="https://github.com/kniffen" target="_blank" rel="noopener noreferrer" aria-label="Kniffen on GitHub">GitHub</a></li>
-            <li><a href="https://www.instagram.com/kniffen_/" target="_blank" rel="noopener noreferrer" aria-label="Kniffen on Instagram">Instagram</a></li>
-            <li><a href="https://dribbble.com/Kniffen" target="_blank" rel="noopener noreferrer" aria-label="Kniffen on Dribbble">Dribbble</a></li>
-            <li><a href="https://twitter.com/kniffen" target="_blank" rel="noopener noreferrer" aria-label="Kniffen on Twitter">Twitter</a></li>
-            <li><a href="https://www.twitch.tv/kniffen" target="_blank" rel="noopener noreferrer"  aria-label="Kniffen on Twitch">Twitch</a></li>
-          </ul>
-        </div>
+    <header class="site-header">
+      <div class="site-logo-wrapper">
+        <img class="site-logo" alt="Kniffen logo" src="/assets/images/logo.svg" />
       </div>
 
-    </main>
+      <nav class="site-navigation">
+        <a href="/">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#art">Art</a>
+      </nav>
+    </header>
 
-    <footer>
-      <p class="copyright">Copyright © Kniffen 2020</p>
+    <div class="social-media">
+      <a href="https://github.com/kniffen" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://dribbble.com/Kniffen" target="_blank" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+      <a href="https://www.instagram.com/kniffen_/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <div class="hero">
+      <p>Hi, I'm Kniffen and...</p>
+      <h1>I like<br />making things</h1> 
+    </div>
+    
+    <a id="projects"></a>
+    <section class="projects">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3 class="project__title">TruckSim-Telemetry</h3>
+        
+        <a class="project__screenshot" href="https://trucksimtelemetry.knifftech.org" target="_blank">
+          <img src="/assets/images/projects/trucksim-telemetry/screenshot.jpg" />
+        </a>
+        
+        <p class="project__description">TruckSim-Telemetry is a node module that takes telemetry data for Euro Truck Simulator 2 and American Truck Simulator provided by the scs-sdk-plugin and outputs parsed data and events.</p>
+        
+        <div class="project__tags">
+          <span>JavaScript</span>
+          <span>C</span>
+          <span>Mocha</span>
+          <span>Sinon.JS</span>
+        </div>
+        
+        <a class="button" href="https://trucksimtelemetry.knifftech.org" target="_blank">View project</a>
+      </div>
+
+      <div class="project">
+        <h3 class="project__title">Gratis Themes</h3>
+        
+        <a class="project__screenshot" href="https://gratisthemes.github.io" target="_blank">
+          <img src="/assets/images/projects/gratis-themes/screenshot.jpg" />
+        </a>
+        
+        <p class="project__description">A collection of free WordPress themes.</p>
+        
+        <div class="project__tags">
+          <span>WordPress</span>
+          <span>PHP</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Gulp</span>
+        </div>
+        
+        <a class="button" href="https://gratisthemes.github.io" target="_blank">View project</a>
+      </div>
+
+      <div class="project">
+        <h3 class="project__title">KniffBot</h3>
+        
+        <a class="project__screenshot" href="https://github.com/kniffen/kniffbot" target="_blank">
+          <img src="/assets/images/projects/kniffbot/screenshot.jpg" />
+        </a>
+        
+        <p class="project__description">A small Discord and Twitch.TV chat bot with a variety of commands and features.</p>
+        
+        <div class="project__tags">
+          <span>TypeScript</span>
+          <span>Moment.js</span>
+          <span>Wolfram|Alpha</span>
+          <span>Weather-js</span>
+          <span>Mocha</span>
+          <span>Sinon.JS</span>
+          <span>Cleverbot API</span>
+          <span>Discord API</span>
+          <span>IRC</span>
+        </div>
+        
+        <a class="button" href="https://github.com/kniffen/kniffbot" target="_blank">View project</a>
+      </div>
+    </section>
+
+    <a id="art"></a>
+    <section class="art">
+      <header class="section-header">
+        <h2 class="section-header__title">Art</h2>
+        <p class="section-header__description">A collection of digital art and graphic design pieces I've made over the years</p>
+      </header>
+      <div class="gallery">
+        <img class="gallery-item__mjolnir" src="/assets/images/art/mjolnir.jpg" alt="Mjolnir poster" />
+        <img class="gallery-item__rottr" src="/assets/images/art/rottr.jpg" alt="Rise of the Tomb Raider poster" />
+        <img class="gallery-item__p" src="/assets/images/art/p.jpg" alt="Paper P" />
+        <img class="gallery-item__v" src="/assets/images/art/v.jpg" alt="3D V" />
+        <img class="gallery-item__u" src="/assets/images/art/u.jpg" alt="Mechanical U" />
+        <img class="gallery-item__mermay" src="/assets/images/art/mermay.jpg" alt="Mermay 2018" />
+        <img class="gallery-item__c124" src="/assets/images/art/c124.jpg" alt="C124" />
+        <img class="gallery-item__rose" src="/assets/images/art/rose_in_hand.jpg" alt="Rose in hand" />
+        <img class="gallery-item__alien" src="/assets/images/art/alien_skull_spider.jpg" alt="Alien skull spider" />
+        <img class="gallery-item__neanderthal" src="/assets/images/art/neanderthal_skull.jpg" alt="Neanderthal skull" />
+        <img class="gallery-item__fedora" src="/assets/images/art/fedora_skull.jpg" alt="Skull wearing a fedora" />
+      </div>
+    </section>
+
+    <a class="scroll-to-top" href="#"><i class="fa fa-chevron-up"></i>Scroll to the top</a>
+
+    <footer class="site-footer">
+      <p>Copyright @ Kniffen 2021</p>
     </footer>
+
   </div>
 
+  <script src="/main.js"></script>
 </body>
 </html>

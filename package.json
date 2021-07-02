@@ -1,0 +1,26 @@
+{
+  "name": "kniffen.github.io",
+  "version": "4.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "serve": "npx live-server .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css-dev": "npx sass ./sass/style.scss ./style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kniffen/kniffen.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kniffen/kniffen.github.io/issues"
+  },
+  "homepage": "https://github.com/kniffen/kniffen.github.io#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "sass": "^1.35.1"
+  }
+}

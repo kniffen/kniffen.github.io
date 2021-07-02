@@ -1,0 +1,16 @@
+.section-header {
+  margin-bottom: 4em;
+  
+  &__title,
+  &__description {
+    margin: 0;
+  }
+
+  &__title {
+    line-height: 1em;
+  }
+
+  &__description {
+
+  }
+}

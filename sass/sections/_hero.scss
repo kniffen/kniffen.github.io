@@ -1,0 +1,35 @@
+.hero {
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 75vh;
+
+  h1,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    line-height: 0.9em;
+    animation-name: transitionUp;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+  }
+
+  p {
+    font-weight: 400;
+    animation-name: transitionUp;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@media (min-width: 48em) {
+  .hero {
+    grid-column: 2 / 12;
+    min-height: 90vh;
+    text-align: left;
+  }
+}

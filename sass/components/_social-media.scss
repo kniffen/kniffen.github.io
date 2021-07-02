@@ -1,0 +1,29 @@
+.social-media {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  animation-name: transitionUp;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+
+  > * + * {
+    margin-left: 1em;
+  }
+}
+
+@media (min-width: 48em) {
+  .social-media {
+    position: fixed;
+    bottom: 1.5em;
+    left: 2em;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    > * + * {
+      margin: 1em 0 0;
+    }
+  }
+}

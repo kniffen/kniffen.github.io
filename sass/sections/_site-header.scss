@@ -69,7 +69,8 @@
 @media (min-width: 48em) {
   .site-header {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    gap: 4em;
     grid-column: 1 / 13;
   }
 
@@ -79,6 +80,10 @@
   }
 
   .site-navigation {
+    padding: 0;
+    flex: 1;
+    text-align: right;
+
     > * + * {
       margin-left: 2em;
     }

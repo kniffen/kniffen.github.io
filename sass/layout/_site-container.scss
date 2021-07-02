@@ -10,8 +10,9 @@
     padding: 2em;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 1em;
-
-    
+    max-width: 90em;
+    margin: 0 auto;
+   
     > a {
       grid-column: 2;
     }

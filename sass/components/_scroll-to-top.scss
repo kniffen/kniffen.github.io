@@ -7,10 +7,10 @@
     display: none;
     position: fixed;
     bottom: -50em;
-    right: 2em;
+    right: 0.5em;
     writing-mode: vertical-rl;
     font-weight: 400;
-    transition: bottom 1s ease-in-out;
+    transition: 1s ease-in-out;
     
     i {
       margin-bottom: 0.25em;
@@ -26,5 +26,11 @@
 
   .js .scroll-to-top {
     display: block;
+  }
+}
+
+@media (min-width: 94em) {
+  .scroll-to-top {
+    right: 2em;
   }
 }

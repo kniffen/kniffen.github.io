@@ -9,8 +9,9 @@
 
 @media (min-width: 48em) {
   .projects {
-    grid-column: 2 / 12;
+    grid-column: 1 / 13;
     text-align: left;
+    margin-bottom: 20em;
     
     > * + * {
       margin-top: 12em;

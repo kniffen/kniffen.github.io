@@ -400,6 +400,7 @@ template {
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -687,12 +688,23 @@ p {
   animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
 }
+.hero .button {
+  background-color: var(--font-color);
+  color: var(--background-color);
+  font-size: 1.4rem;
+  width: 10em;
+  margin: 1em auto 0;
+  text-align: center;
+}
 
 @media (min-width: 48em) {
   .hero {
     grid-column: 1/12;
     min-height: 94vh;
     text-align: left;
+  }
+  .hero .button {
+    margin: 1em 0 0;
   }
 }
 .projects {

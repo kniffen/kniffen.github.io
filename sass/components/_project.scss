@@ -46,6 +46,10 @@
       justify-content: left;
     }
 
+    &:nth-child(odd) .project__tags {
+      justify-content: right;
+    }
+
     .button {
       margin-top: 4em;
       justify-self: start;

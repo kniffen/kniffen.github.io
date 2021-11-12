@@ -778,7 +778,7 @@ p {
   }
   .gallery img {
     vertical-align: top;
-    width: calc(100% / 3 - 1em);
+    width: calc(33.3333333333% - 1em);
   }
   .gallery .gallery-item__mjolnir, .gallery .gallery-item__rottr {
     width: calc(50% - 1em);
@@ -923,6 +923,9 @@ p {
   }
   .project__tags {
     justify-content: left;
+  }
+  .project:nth-child(odd) .project__tags {
+    justify-content: right;
   }
   .project .button {
     margin-top: 4em;

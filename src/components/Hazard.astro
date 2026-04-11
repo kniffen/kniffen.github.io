@@ -1,0 +1,38 @@
+---
+const { class: className, ...rest } = Astro.props;
+---
+
+<div class:list={["hazard", className]} {...rest}></div>
+
+<style>
+  .hazard {
+    position: relative;
+    height: 10px;
+  }
+
+  .hazard::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 16rem;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 15px,
+      var(--accent-color) 15px,
+      var(--accent-color) 30px
+    );
+  }
+
+  .hazard::after {
+    content: "";
+    display: block;
+    width: calc(100% - 15rem);
+    height: 100%;
+    background-color: var(--accent-color);
+    z-index: 100;
+  }
+</style>

@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import MjolnirPoster from '../assets/art/mjolnir.jpg'
+import tombRaiderPoster from '../assets/art/rottr.jpg'
+import alienSkullSpider from '../assets/art/alien_skull_spider.jpg'
+import c124 from '../assets/art/c124.jpg'
+import fedoraSkull from '../assets/art/fedora_skull.jpg'
+import mermay from '../assets/art/mermay.jpg'
+import neanderthalSkull from '../assets/art/neanderthal_skull.jpg'
+import p from '../assets/art/p.jpg'
+import roseInHand from '../assets/art/rose_in_hand.jpg'
+import u from '../assets/art/u.jpg'
+import v from '../assets/art/v.jpg'
+---
+
+<Layout>
+  <div class="container">
+    <h1>Art</h1>
+
+    <div class="gallery">
+      <img src={MjolnirPoster.src} alt="Mjolnir poster" />
+      <img src={tombRaiderPoster.src} alt="Rise of the Tomb Raider poster" />
+      <div></div>
+      
+      <img src={p.src} alt="P" />
+      <img src={v.src} alt="V" />
+      <img src={u.src} alt="U" />
+      
+      <img src={alienSkullSpider.src} alt="Alien skull" />
+      <img src={neanderthalSkull.src} alt="Neanderthal skull" />
+      <img src={fedoraSkull.src} alt="Skull with a fedora" />
+      
+      <img src={mermay.src} alt="Mermay" />
+      <img src={c124.src} alt="Mercedes-Benz C124" />
+      <img src={roseInHand.src} alt="Rose in hand" />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+</style>

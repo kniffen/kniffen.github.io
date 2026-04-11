@@ -1,0 +1,141 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Highlight from '../components/Highlight.astro';
+import Button from '../components/Button.astro';
+import ProjectCards from '../components/ProjectCards.astro';
+---
+
+<Layout>
+  <div class:list={['container', 'hero']}>
+  	<div>
+      <h1>Hi, I'm Kniffen</h1>
+      <p>...and I like <Highlight>making</Highlight> things</p>
+    </div>
+    <div class="box">
+      <pre>
+             ,----------------,              ,---------,
+        ,-----------------------,          ,"        ,"|
+      ,"                      ,"|        ,"        ,"  |
+     +-----------------------+  |      ,"        ,"    |
+     |  .-----------------.  |  |     +---------+      |
+     |  |                 |  |  |     | -==---- |      |
+     |  |                 |  |  |     |         |      |
+     |  |                 |  |  |/----| ---=    |      |
+     |  |                 |  |  |   ,/|==== ooo |      ;
+     |  |                 |  |  |  // |((( [133]|    ,"
+     |  `-----------------'  |,"  //  |(((      |  ,"
+     +-----------------------+  //    |         |,"   
+     // /_)______________(_/   //     +---------+
+   _/_________________________/___  
+  /  oooooooooooooooo  .o.  oooo /,  
+ / ==ooooooooooooooo==.o.  ooo= //   
+/_==__==========__==_ooo__ooo=_/'   
+`-----------------------------'
+      </pre>
+      <pre>{`
+
+
+
+
+
+         #include <stdio.h
+         
+         int main() {
+           printf("Hello,                   oo`}<span id="indicator">o</span>{`
+           return 0;                        133
+      `}</pre>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Projects</h2>
+
+    <ProjectCards limit={3} />
+
+    <div class="button-wrapper">
+      <Button class="button" href="/projects">View all projects</Button>  
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const indicator = document.getElementById('indicator');
+  let count = 0;
+  let count2 = 0
+  setInterval(() => {
+    if (!indicator) return;
+    if (count > 2) {
+      count2++;
+    }
+
+    indicator.textContent = (count2 === 2 || count2 === 4) ? ' ': 'o';
+
+    if (count2 > 4) {
+      count = 0;
+      count2 = 0;
+    }
+
+    count++
+  }, 500);
+</script>
+
+
+<style>
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+.hero img {
+  max-width: 40rem;
+}
+
+.box {
+  position: relative;
+  display: none;
+  width: 30rem;
+  height: 20rem;
+  transform: rotate(10deg);
+  margin: 3rem 5rem 0 0;
+
+  pre {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  pre:nth-child(2) {
+    color: var(--accent-color);
+  }
+}
+
+@media (min-width: 768px) {
+  .box {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    flex-direction: row;
+  }
+}
+
+.button-wrapper {
+    margin: 2rem 0 0;
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+

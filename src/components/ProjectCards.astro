@@ -1,0 +1,66 @@
+---
+import Card from "./Card.astro";
+import trucksimTelemetryScreenshot from '../assets/projects/trucksim-telemetry/screenshot.jpg';
+import butlerenScreenshot from '../assets/projects/butleren/logo.png';
+import gratisThemesScreenshot from '../assets/projects/gratis-themes/screenshot.jpg';
+import nonopunkScreenshot from '../assets/projects/nonopunk/screenshot.jpg';
+
+type Props = {
+  limit?: number;
+}
+
+const { limit } = Astro.props;
+
+type Project = {
+  title: string;
+  description: string;
+  link: string;
+  img: ImageMetadata;
+}
+
+const projects: Project[] = [
+  {
+    title: "TruckSim Telemetry",
+    description: "Telemetry data from EUro Truck Simulator 2 and American Truck Simulator in nodejs",
+    link: "https://kniffen.dev/TruckSim-Telemetry/",
+    img: trucksimTelemetryScreenshot
+  },
+  {
+    title: "Butleren",
+    description: "Discord chatbot with twitch, kick, youtube integrations and weather reports",
+    link: "https://github.com/kniffen/butleren",
+    img: butlerenScreenshot
+  },
+  {
+    title: "Gratis Themes",
+    description: "A collection of free WordPress themes",
+    link: "https://gratis-themes.com/",
+    img: gratisThemesScreenshot
+  },
+  {
+    title: "Nonopunk",
+    description: "Nonogram game in a cyberpunk style",
+    link: "https://nonopunk.kniffen.dev/",
+    img: nonopunkScreenshot
+  }
+]
+---
+
+<div class="projects">
+  {projects.map(({title, description, link, img}, i) => {
+    if (limit && i >= limit) {
+      return null
+    }
+
+    return <Card title={title} description={description} link={link} img={img} />
+  })}
+</div> 
+
+<style>
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
+  }
+</style>
+

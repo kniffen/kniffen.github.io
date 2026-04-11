@@ -1,0 +1,15 @@
+---
+const { href, ...props } = Astro.props;
+const { pathname } = Astro.url;
+const isActive = href === '/' 
+  ? pathname === '/' 
+  : pathname.startsWith(href);
+---
+
+<a class:list={["navlink", isActive ? 'active' : null]} href={href} {...props}><slot /></a>
+
+<style>
+  .navlink.active {
+    color: var(--text-color);
+  }
+</style>

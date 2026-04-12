@@ -18,7 +18,7 @@ import v from '../assets/art/v.jpg'
   <div class="container">
     <h1>Art</h1>
 
-    <div class="gallery">
+    <div class="gallery gallery--two-columns">
       <img src={MjolnirPoster.src} alt="Mjolnir poster" />
       <img src={tombRaiderPoster.src} alt="Rise of the Tomb Raider poster" />
     </div>
@@ -42,9 +42,18 @@ import v from '../assets/art/v.jpg'
 <style>
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1rem;
     margin-block-end: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(3, minmax(14rem, 1fr));
+    }
+
+    .gallery--two-columns {
+      grid-template-columns: repeat(2, minmax(14rem, 1fr));
+    }
   }
 
   img {

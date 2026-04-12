@@ -59,8 +59,19 @@ const projects: Project[] = [
 <style>
   .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1rem;
+  }
+
+  @media (min-width: 560px) {
+    .projects {
+      grid-template-columns: repeat(2, minmax(16rem, 1fr));
+    }
+  }
+
+  @media (min-width: 920px) {
+    .projects {
+      grid-template-columns: repeat(3, minmax(16rem, 1fr));
+    }
   }
 </style>
 

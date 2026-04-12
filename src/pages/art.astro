@@ -21,8 +21,9 @@ import v from '../assets/art/v.jpg'
     <div class="gallery">
       <img src={MjolnirPoster.src} alt="Mjolnir poster" />
       <img src={tombRaiderPoster.src} alt="Rise of the Tomb Raider poster" />
-      <div></div>
+    </div>
       
+    <div class="gallery">
       <img src={p.src} alt="P" />
       <img src={v.src} alt="V" />
       <img src={u.src} alt="U" />
@@ -43,6 +44,7 @@ import v from '../assets/art/v.jpg'
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1rem;
+    margin-block-end: 1rem;
   }
 
   img {
